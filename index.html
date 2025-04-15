@@ -182,5 +182,57 @@
             }
         }
     </script>
+
+    <!-- Add this before </body> -->
+    <div id="image-overlay" class="image-overlay">
+        <button class="overlay-close" aria-label="Close overlay">&times;</button>
+        <img id="overlay-image" src="" alt="Full size project image">
+    </div>
+
+    <script>
+        // Get DOM elements
+        const overlay = document.getElementById('image-overlay');
+        const overlayImage = document.getElementById('overlay-image');
+        const closeButton = document.querySelector('.overlay-close');
+        const projectImages = document.querySelectorAll('.project-image img, .project-image iframe');
+
+        // Open overlay when clicking project images
+        projectImages.forEach(image => {
+            image.addEventListener('click', () => {
+                const imageUrl = image.src;
+                overlayImage.src = imageUrl;
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            });
+        });
+
+        // Close overlay when clicking outside the image
+        overlay.addEventListener('click', (e) => {
+            // Disable the if condition: close the overlay wherever a leftclick happens
+            //if (e.target === overlay) {
+                closeOverlay();
+            //}
+        });
+
+        // Close overlay when clicking the close button
+        closeButton.addEventListener('click', closeOverlay);
+
+        // Close overlay when pressing Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && overlay.classList.contains('active')) {
+                closeOverlay();
+            }
+        });
+
+        // Function to close overlay
+        function closeOverlay() {
+            overlay.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+            // Clear the image src after animation
+            setTimeout(() => {
+                overlayImage.src = '';
+            }, 300);
+        }
+    </script>
 </body>
 </html> 
