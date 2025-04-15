@@ -126,14 +126,46 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, var(--accent-primary), #a8e6cf);
     color: white;
     padding: 0 1rem;
+    position: relative;
+    background: url('assets/main.jpg') center/cover no-repeat;
+}
+
+/* Add an overlay to ensure text readability */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(108, 92, 231, 0.8), /* var(--accent-primary) */
+        rgba(168, 230, 207, 0.5) /* #a8e6cf */
+    );
+    z-index: 1;
+}
+
+/* Ensure content stays above the overlay */
+.hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
+    text-shadow: 
+        0 2px 6px rgba(0, 0, 0, 0.5),
+        0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    text-shadow: 
+        0 1px 4px rgba(0, 0, 0, 0.6),
+        0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button {
@@ -146,6 +178,9 @@ nav {
     margin-top: 2rem;
     font-weight: bold;
     transition: transform 0.3s ease;
+    box-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.1),
+        0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button:hover {
@@ -254,19 +289,36 @@ nav {
 
 .project-image {
     width: 40%;
-    min-height: 300px;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
 }
 
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Fallback for browsers that don't support aspect-ratio */
+@supports not (aspect-ratio: 16 / 9) {
+    .project-image {
+        position: relative;
+    }
+    
+    .project-image::before {
+        content: '';
+        display: block;
+        padding-top: 56.25%; /* 9/16 = 0.5625 */
+    }
+    
+    .project-image img,
+    .project-image iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
 }
 
+.project-image img,
 .project-image iframe {
     width: 100%;
     height: 100%;
+    object-fit: cover;
     border: none;
 }
 
@@ -352,7 +404,7 @@ footer {
     text-align: center;
     color: var(--text-primary);
     margin: 5rem 0 3rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .library-grid {
@@ -398,7 +450,11 @@ footer {
     }
     
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
     }
     
     .project-card {
@@ -408,10 +464,6 @@ footer {
     .project-image,
     .project-content {
         width: 100%;
-    }
-    
-    .project-image {
-        min-height: 200px;
     }
     
     .library-grid {
