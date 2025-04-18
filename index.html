@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Site</title>
+    <title>Adrien Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Your Name</div>
+            <div class="logo">Adrien David</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -27,9 +27,9 @@
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1>Welcome to My Portfolio</h1>
-                <p>I'm a passionate developer creating amazing things</p>
-                <a href="#projects" class="cta-button">View My Work</a>
+                <h1>Welcome</h1>
+                <p>I am a passionate graphics programmer and senior software developer</p>
+                <a href="#projects" class="cta-button">My Work</a>
             </div>
         </section>
 
@@ -37,74 +37,89 @@
             <h2>About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Hello! I'm a software developer passionate about creating elegant solutions to complex problems. With expertise in web development and software engineering, I love building things that make a difference.</p>
+                    <p>Passionate graphics programmer, with personal projects covering 2D and 3D video game engines
+                       (rendering and gameplay) as well as prototypes of advanced real-time rendering techniques.
+                       Eager to learn and develop using new rendering technologies.</p>
                 </div>
                 <div class="skills">
-                    <h3>Skills</h3>
+                    <h3>Highlighted Skills</h3>
                     <ul>
-                        <li>HTML/CSS</li>
-                        <li>JavaScript</li>
-                        <li>Python</li>
-                        <li>Git</li>
+                        <li>C++</li>
+                        <li>OpenGL & GLSL</li>
+                        <li>Real-time rendering</li>
+                        <li>Software design</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section id="projects" class="projects">
-            <h2>My Projects</h2>
+            <h2>Projects</h2>
             
             <!-- Featured Projects -->
             <div class="project-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <iframe src="assets/project1.html" frameborder="0"></iframe>
+                        <img src="assets/rtr_11-filtered_normaloriented-AO.jpg"/>
                     </div>
                     <div class="project-content">
-                        <h3>Project 1</h3>
-                        <p>Description of your first project goes here. Add a more detailed description that explains the project's purpose, technologies used, and your role in its development.</p>
-                        <a href="#" class="project-link">View Project</a>
+                        <h3>Real-time rendering prototypes</h3>
+                        <p>
+                            Several standalone applications demonstrating real-time rendering techniques.<br/>
+                            Includes area lights, linearly transformed cosine (polygon lights), highly configurable SSAO, and PBR with image-based lighting (IBL).<br/>
+                            Relies on a generic and extensible engine for rapid prototyping, featuring shader hot-reloading, dynamic caching for fast startup, custom runtime file formats, a user-friendly GUI, and serialization support.</p>
+                        <a href="https://github.com/Adnn/realtime_rendering_prototypes" class="project-link">View Project</a>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <iframe src="assets/project2.html" frameborder="0"></iframe>
+                        <img src="assets/snacman.jpg" alt="Snacman"/>
                     </div>
                     <div class="project-content">
-                        <h3>Project 2</h3>
-                        <p>Description of your second project goes here. Add a more detailed description that explains the project's purpose, technologies used, and your role in its development.</p>
-                        <a href="#" class="project-link">View Project</a>
+                        <h3>Snacman</h3>
+                        <p>
+                            Snacman is a fast-paced party-game where players navigate procedurally generated labyrinth in a colorful 3D world.<br/>
+                            OpenGL AZDO engine decoupled from simulation, with dynamic lighting, cascaded shadow map, SDF text and skeletal animation.
+                        </p>
+                        <a href="https://github.com/ShredEagle/snacman" class="project-link">View Project</a>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <iframe src="assets/project3.html" frameborder="0"></iframe>
+                        <img src="assets/grapito.jpg" alt="Grapito"/>
                     </div>
                     <div class="project-content">
-                        <h3>Project 3</h3>
-                        <p>Description of your third project goes here. Add a more detailed description that explains the project's purpose, technologies used, and your role in its development.</p>
-                        <a href="#" class="project-link">View Project</a>
+                        <h3>Grapito</h3>
+                        <p>
+                            Grapito is a 2D party-game based on physics and grapples. Optimized for instant fun and back-to-back short games.<br/>
+                            Animated sprite graphics with parallax scrolling, text, physics and parametric curves.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://shredeagle.itch.io/grapito" class="project-link">View Release</a><br/>
+                            <a href="https://github.com/ShredEagle/grapito" class="project-link">View Project</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Library Section -->
-            <h3 class="library-title">Project Library</h3>
+            <h3 class="library-title">Libraries</h3>
             <div class="library-grid">
                 <div class="library-card">
-                    <h4>Library Project 1</h4>
-                    <p>Brief description of the project.</p>
-                    <a href="#" class="project-link">View Project</a>
+                    <h4>Math</h4>
+                    <p>Generic mathematical library, featuring strongly-typed support for linear algebra and other essential topics for graphics programming.</p>
+                    <a href="https://github.com/ShredEagle/math" class="project-link">View Project</a>
                 </div>
                 <div class="library-card">
-                    <h4>Library Project 2</h4>
-                    <p>Brief description of the project.</p>
-                    <a href="#" class="project-link">View Project</a>
+                    <h4>Graphics</h4>
+                    <p>Graphics library for C++ and OpenGL.
+                       It provides a non-invasive, modular, and generic foundation to develop rendering engines and graphical applications.</p>
+                    <a href="https://github.com/ShredEagle/graphics" class="project-link">View Project</a>
                 </div>
                 <div class="library-card">
-                    <h4>Library Project 3</h4>
-                    <p>Brief description of the project.</p>
-                    <a href="#" class="project-link">View Project</a>
+                    <h4>Entity</h4>
+                    <p>ECS library based on archetypes. It serves as a data-oriented framework for implementing gameplay in video games.</p>
+                    <a href="https://github.com/ShredEagle/entity" class="project-link">View Project</a>
                 </div>
             </div>
         </section>
@@ -115,9 +130,8 @@
                 <div class="contact-info">
                     <p>Feel free to reach out to me!</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/Adnn"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/adriendavid/"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>
@@ -125,7 +139,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2025 Adrien David. All rights reserved.</p>
     </footer>
 
     <script>
@@ -172,6 +186,58 @@
                 sunIcon.style.opacity = '1';
                 moonIcon.style.opacity = '0';
             }
+        }
+    </script>
+
+    <!-- Add this before </body> -->
+    <div id="image-overlay" class="image-overlay">
+        <button class="overlay-close" aria-label="Close overlay">&times;</button>
+        <img id="overlay-image" src="" alt="Full size project image">
+    </div>
+
+    <script>
+        // Get DOM elements
+        const overlay = document.getElementById('image-overlay');
+        const overlayImage = document.getElementById('overlay-image');
+        const closeButton = document.querySelector('.overlay-close');
+        const projectImages = document.querySelectorAll('.project-image img, .project-image iframe');
+
+        // Open overlay when clicking project images
+        projectImages.forEach(image => {
+            image.addEventListener('click', () => {
+                const imageUrl = image.src;
+                overlayImage.src = imageUrl;
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            });
+        });
+
+        // Close overlay when clicking outside the image
+        overlay.addEventListener('click', (e) => {
+            // Disable the if condition: close the overlay wherever a leftclick happens
+            //if (e.target === overlay) {
+                closeOverlay();
+            //}
+        });
+
+        // Close overlay when clicking the close button
+        closeButton.addEventListener('click', closeOverlay);
+
+        // Close overlay when pressing Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && overlay.classList.contains('active')) {
+                closeOverlay();
+            }
+        });
+
+        // Function to close overlay
+        function closeOverlay() {
+            overlay.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+            // Clear the image src after animation
+            setTimeout(() => {
+                overlayImage.src = '';
+            }, 300);
         }
     </script>
 </body>
