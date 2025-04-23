@@ -231,6 +231,7 @@ nav {
     color: var(--text-primary);
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
+    text-align: center;
 }
 
 .skills ul {
@@ -342,7 +343,6 @@ nav {
 .project-link {
     display: inline-block;
     color: var(--accent-secondary);
-    text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
@@ -364,7 +364,7 @@ nav {
 }
 
 .contact-content {
-    max-width: 600px;
+    max-width: 620px;
     margin: 0 auto;
     text-align: center;
 }
