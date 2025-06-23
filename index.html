@@ -55,9 +55,10 @@
 
         <section id="projects" class="projects">
             <h2>Projects</h2>
-            
+
             <!-- Featured Projects -->
             <div class="project-grid">
+
                 <div class="project-card">
                     <div class="project-image">
                         <img src="assets/rtr_prototypes/ch11_ssao/rtr_11-diagonal_ao_shade-1920.jpg"/>
@@ -71,6 +72,7 @@
                         <a href="https://github.com/Adnn/realtime_rendering_prototypes" class="project-link">View Project</a>
                     </div>
                 </div>
+
                 <div class="project-card">
                     <div class="project-image">
                         <img src="assets/snacman/snacgame.jpg" alt="Snacman"/>
@@ -85,6 +87,7 @@
                         <a href="https://github.com/ShredEagle/snacman/releases" class="project-link">View Release</a>
                     </div>
                 </div>
+
                 <div class="project-card">
                     <div class="project-image">
                         <img src="assets/grapito/grapito.jpg" alt="Grapito"/>
@@ -101,6 +104,23 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/shmurp/shmurp-window.jpg" alt="Shmurp" class="shmurp-image"/>
+                    </div>
+                    <div class="project-content">
+                        <h3>Shmurp</h3>
+                        <p>
+                            Shmurp is a vertical-scrolling shoot-em-up prototype featuring minimalist geometric 3D graphics and a separable bloom filter.<br/>
+                             It pays tribute to the first boss from one of the most acclaimed bullet-hell games, achieved via a continuation-based event-system.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/ShredEagle/shmurp" class="project-link">View Project</a><br/>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Library Section -->
@@ -148,7 +168,7 @@
         const themeToggle = document.getElementById('theme-toggle');
         const sunIcon = themeToggle.querySelector('.sun-icon');
         const moonIcon = themeToggle.querySelector('.moon-icon');
-        
+
         // Check for saved theme preference or use system preference
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme) {
@@ -173,7 +193,7 @@
         themeToggle.addEventListener('click', () => {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            
+
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateIcon(newTheme);
@@ -242,4 +262,4 @@
         }
     </script>
 </body>
-</html> 
+</html>
